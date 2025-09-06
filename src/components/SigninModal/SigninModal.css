@@ -1,0 +1,41 @@
+.modal-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-cont {
+    background: white;
+    border-radius: 8px;
+    padding: 1rem;
+    z-index: 1001;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+
+    height: auto;
+
+    gap: 1rem;
+}
+
+.modal-title {
+    text-align: center;
+    font-size: 28px;
+}
+
+.modal-cancel-bttn-cont {
+    width: 100%;
+    display: flex;
+    justify-content: end;
+}

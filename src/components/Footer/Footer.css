@@ -1,0 +1,30 @@
+.footer {
+    background-color: #D94F04;
+    color: #F4E2DE;
+    width: 100vw;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 30px;
+}
+
+.signature {
+    font-family: "Bytesized", sans-serif;
+    font-size: 60px;
+    user-select: none;
+}
+
+.footerlink {
+    color: #F4E2DE;
+}
+
+.tiny {
+    font-size: 10px;
+    opacity: 0.5;
+    user-select: none;
+
+    text-align: center;
+}

@@ -1,0 +1,50 @@
+.searchbar-cont {
+    padding: 8px 16px !important;
+    border-radius: 33px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.5);
+    background-color: #eae8e8;
+    backdrop-filter: blur(5px);
+    border: 0px none;
+    height: 25px;
+    width: 400px;
+    gap: 1rem;
+
+    justify-self: center;
+
+    position: sticky;  /* this is the magic */
+    top: 1.5rem;         /* distance from the top when it sticks */
+    z-index: 100000;      /* make sure it stays on top of other elements */
+
+    transition: linear 0.2s;
+    outline-offset: -2px;
+    outline: 2px solid #eae8e8;
+}
+
+.searchbar-cont:focus-within {
+    outline-offset: -2px;
+    outline-color: #13678A;
+    transition: linear 0.2s;
+}
+
+.searchbar-cont:hover {
+    background-color: #C0BEBE;
+}
+
+.search-field {
+    width: inherit;
+    height: inherit;
+    background: none;
+    border: 0;
+    color: #13678A;
+    font-size: 18px;
+    font-weight: 550;
+    transition: ease-in-out 0.2s;
+}
+
+.search-field:focus {
+    outline: none;
+}

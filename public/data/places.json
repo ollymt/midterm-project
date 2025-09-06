@@ -1,0 +1,210 @@
+[
+  {
+    "id": 1,
+    "name": "The Study Nook",
+    "location": "Quezon City",
+    "price": 300,
+    "main_image": "https://imgs.search.brave.com/4nz-x_KOSAvVq4JkZwEWKqVpyVyrpZqcevGtNawsGOs/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9saWJy/YXJ5LnVjci5lZHUv/c2l0ZXMvZGVmYXVs/dC9maWxlcy8yMDI0/LTA2L3JpdmVyYV9v/cGVuX3N0dWR5X3Nw/YWNlc19iYXNlbWVu/dC5qcGc",
+    "images": ["/assets/space1_a.jpg", "/assets/space1_b.jpg"],
+    "description": "A quiet and cozy space perfect for deep focus sessions. Equipped with soundproof pods and an extensive library for a productive day.",
+    "amenities": [
+      "High-speed Wi-Fi",
+      "Free Coffee & Tea",
+      "Power Outlets at every seat",
+      "Air-conditioned",
+      "Printing Services"
+    ],
+    "hours": "9:00 AM - 9:00 PM",
+    "time_slots": ["9am - 1pm", "1pm - 5pm", "5pm - 9pm"]
+  },
+  {
+    "id": 2,
+    "name": "WorkHaven Makati",
+    "location": "Makati City",
+    "price": 500,
+    "main_image": "https://imgs.search.brave.com/lo5y8vXbArYt3XDdhAB2WXwWCWSHiFV-jCCkje4MzqY/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9saWJy/YXJpZXMudXRhLmVk/dS9zaXRlcy9kZWZh/dWx0L2ZpbGVzL3N0/eWxlcy8xOTIwL3B1/YmxpYy8yMDI0LTEy/L0NvbGxhYiUyMFNw/YWNlczIwMjQtMi5q/cGc_aXRvaz1FMUVM/aGZfbg",
+    "images": ["/assets/space2_a.jpg", "/assets/space2_b.jpg"],
+    "description": "A professional co-working environment in the heart of the business district. Ideal for meetings, collaborations, and networking.",
+    "amenities": [
+      "Fiber Internet",
+      "Meeting Rooms",
+      "Gourmet Pantry",
+      "24/7 Access",
+      "Ergonomic Chairs"
+    ],
+    "hours": "Open 24/7",
+    "time_slots": ["Full Day Pass", "Night Owl Pass (9pm-6am)"]
+  },
+  {
+    "id": 3,
+    "name": "Cebu Creative Hub",
+    "location": "Cebu City",
+    "price": 250,
+    "main_image": "https://imgs.search.brave.com/USmVM541znajUTPB2QGfwxjMaARoZYUnS9gmRwhKxQc/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9saWJy/YXJpZXMudXRhLmVk/dS9zaXRlcy9kZWZh/dWx0L2ZpbGVzL3N0/eWxlcy8xOTIwL3B1/YmxpYy8yMDI0LTEy/L0NvbGxhYiUyMFNw/YWNlczIwMjQuanBn/P2l0b2s9WVZOWjZE/U0Y",
+    "images": [],
+    "description": "A vibrant and artistic space designed to foster creativity and collaboration among Cebu's digital nomads and artists.",
+    "amenities": [
+      "Community Events",
+      "Art Supplies",
+      "Fast Wi-Fi",
+      "Pet-friendly",
+      "Outdoor Garden"
+    ],
+    "hours": "10:00 AM - 7:00 PM",
+    "time_slots": ["Morning Session (10am-2pm)", "Afternoon Session (2pm-6pm)"]
+  },
+  {
+    "id": 4,
+    "name": "The Quiet Corner",
+    "location": "123 Maple St, Downtown",
+    "price": "Free",
+    "main_image": "https://example.com/images/quiet_corner_main.jpg",
+    "images": [
+      "https://example.com/images/quiet_corner_1.jpg",
+      "https://example.com/images/quiet_corner_2.jpg",
+      "https://example.com/images/quiet_corner_3.jpg"
+    ],
+    "description": "A cozy nook perfect for solo studying with natural light and comfy chairs.",
+    "amenities": ["WiFi", "Coffee", "Power Outlets", "Quiet Environment"],
+    "hours": "8:00 AM - 10:00 PM",
+    "time_slots": ["8:00-10:00", "10:00-12:00", "12:00-14:00", "14:00-16:00", "16:00-18:00", "18:00-20:00", "20:00-22:00"]
+  },
+  {
+    "id": 5,
+    "name": "Campus Library",
+    "location": "456 University Ave",
+    "price": "$5/day",
+    "main_image": "https://example.com/images/campus_library_main.jpg",
+    "images": [
+      "https://example.com/images/campus_library_1.jpg",
+      "https://example.com/images/campus_library_2.jpg"
+    ],
+    "description": "Spacious library with private study rooms and group study areas.",
+    "amenities": ["WiFi", "Printing", "Study Rooms", "Quiet Zones"],
+    "hours": "7:00 AM - 11:00 PM",
+    "time_slots": ["7:00-9:00", "9:00-11:00", "11:00-13:00", "13:00-15:00", "15:00-17:00", "17:00-19:00", "19:00-21:00", "21:00-23:00"]
+  },
+  {
+    "id": 6,
+    "name": "Cafe Espresso",
+    "location": "789 Coffee Lane",
+    "price": "$2-$10",
+    "main_image": "https://example.com/images/cafe_espresso_main.jpg",
+    "images": [
+      "https://example.com/images/cafe_espresso_1.jpg",
+      "https://example.com/images/cafe_espresso_2.jpg",
+      "https://example.com/images/cafe_espresso_3.jpg"
+    ],
+    "description": "Trendy coffee shop with strong WiFi and great pastries for study breaks.",
+    "amenities": ["WiFi", "Coffee", "Pastries", "Power Outlets"],
+    "hours": "6:00 AM - 9:00 PM",
+    "time_slots": ["6:00-8:00", "8:00-10:00", "10:00-12:00", "12:00-14:00", "14:00-16:00", "16:00-18:00", "18:00-20:00"]
+  },
+  {
+    "id": 7,
+    "name": "Riverside Study Hall",
+    "location": "321 River Rd",
+    "price": "Free",
+    "main_image": "https://example.com/images/riverside_main.jpg",
+    "images": [
+      "https://example.com/images/riverside_1.jpg",
+      "https://example.com/images/riverside_2.jpg"
+    ],
+    "description": "Scenic study hall by the river, perfect for focus and relaxation.",
+    "amenities": ["WiFi", "Outdoor Seating", "Quiet Areas"],
+    "hours": "9:00 AM - 8:00 PM",
+    "time_slots": ["9:00-11:00", "11:00-13:00", "13:00-15:00", "15:00-17:00", "17:00-19:00"]
+  },
+  {
+    "id": 8,
+    "name": "Tech Hub Co-Work",
+    "location": "654 Innovation Blvd",
+    "price": "$15/day",
+    "main_image": "https://example.com/images/tech_hub_main.jpg",
+    "images": [
+      "https://example.com/images/tech_hub_1.jpg",
+      "https://example.com/images/tech_hub_2.jpg",
+      "https://example.com/images/tech_hub_3.jpg"
+    ],
+    "description": "Modern co-working space with fast WiFi and ergonomic seating.",
+    "amenities": ["WiFi", "Coffee", "Printing", "Power Outlets", "Meeting Rooms"],
+    "hours": "8:00 AM - 10:00 PM",
+    "time_slots": ["8:00-10:00", "10:00-12:00", "12:00-14:00", "14:00-16:00", "16:00-18:00", "18:00-20:00", "20:00-22:00"]
+  },
+  {
+    "id": 9,
+    "name": "Green Garden Cafe",
+    "location": "987 Blossom St",
+    "price": "$3-$12",
+    "main_image": "https://example.com/images/green_garden_main.jpg",
+    "images": [
+      "https://example.com/images/green_garden_1.jpg",
+      "https://example.com/images/green_garden_2.jpg"
+    ],
+    "description": "Café with plants everywhere, natural light, and calm music for studying.",
+    "amenities": ["WiFi", "Coffee", "Outdoor Seating", "Power Outlets"],
+    "hours": "7:00 AM - 9:00 PM",
+    "time_slots": ["7:00-9:00", "9:00-11:00", "11:00-13:00", "13:00-15:00", "15:00-17:00", "17:00-19:00", "19:00-21:00"]
+  },
+  {
+    "id": 10,
+    "name": "Library Loft",
+    "location": "222 Elm St",
+    "price": "Free",
+    "main_image": "https://example.com/images/library_loft_main.jpg",
+    "images": [
+      "https://example.com/images/library_loft_1.jpg",
+      "https://example.com/images/library_loft_2.jpg",
+      "https://example.com/images/library_loft_3.jpg"
+    ],
+    "description": "Loft-style library with quiet corners and plenty of desk space.",
+    "amenities": ["WiFi", "Quiet Areas", "Power Outlets", "Study Rooms"],
+    "hours": "8:00 AM - 10:00 PM",
+    "time_slots": ["8:00-10:00", "10:00-12:00", "12:00-14:00", "14:00-16:00", "16:00-18:00", "18:00-20:00", "20:00-22:00"]
+  },
+  {
+    "id": 11,
+    "name": "Sunset Study Patio",
+    "location": "111 Sunset Blvd",
+    "price": "$5/day",
+    "main_image": "https://example.com/images/sunset_patio_main.jpg",
+    "images": [
+      "https://example.com/images/sunset_patio_1.jpg",
+      "https://example.com/images/sunset_patio_2.jpg"
+    ],
+    "description": "Outdoor patio ideal for evening study sessions with sunset views.",
+    "amenities": ["WiFi", "Outdoor Seating", "Coffee"],
+    "hours": "10:00 AM - 8:00 PM",
+    "time_slots": ["10:00-12:00", "12:00-14:00", "14:00-16:00", "16:00-18:00", "18:00-20:00"]
+  },
+  {
+    "id": 12,
+    "name": "Downtown Book Nook",
+    "location": "333 Center St",
+    "price": "$2-$8",
+    "main_image": "https://example.com/images/book_nook_main.jpg",
+    "images": [
+      "https://example.com/images/book_nook_1.jpg",
+      "https://example.com/images/book_nook_2.jpg"
+    ],
+    "description": "Tiny bookstore with a small café inside, perfect for quiet reading and study.",
+    "amenities": ["WiFi", "Coffee", "Bookshelves", "Quiet Environment"],
+    "hours": "9:00 AM - 9:00 PM",
+    "time_slots": ["9:00-11:00", "11:00-13:00", "13:00-15:00", "15:00-17:00", "17:00-19:00", "19:00-21:00"]
+  },
+  {
+    "id": 13,
+    "name": "Highland Study Lounge",
+    "location": "555 Hilltop Rd",
+    "price": "$10/day",
+    "main_image": "https://example.com/images/highland_lounge_main.jpg",
+    "images": [
+      "https://example.com/images/highland_lounge_1.jpg",
+      "https://example.com/images/highland_lounge_2.jpg"
+    ],
+    "description": "Modern lounge with panoramic city views and comfy seating for long study sessions.",
+    "amenities": ["WiFi", "Coffee", "Power Outlets", "Panoramic Views"],
+    "hours": "7:00 AM - 11:00 PM",
+    "time_slots": ["7:00-9:00", "9:00-11:00", "11:00-13:00", "13:00-15:00", "15:00-17:00", "17:00-19:00", "19:00-21:00", "21:00-23:00"]
+  }
+]

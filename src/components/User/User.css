@@ -1,0 +1,47 @@
+.user-cont {
+    width: 100%;
+    background-color: #eae8e8;
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 10px;
+
+    display: flex;
+    flex-direction: row;
+
+    gap: 1rem;
+
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.5);
+
+    cursor: pointer;
+}
+
+.pfp-cont {
+    width: 80px;
+    height: 80px;
+    border-radius: 50px;
+
+    overflow: hidden;
+}
+
+.user-name-cont {
+    display: flex;
+    flex-direction: column;
+
+    align-self: center;
+}
+
+.user-list-disp-name {
+    font-size: 25px;
+}
+
+.user-list-username {
+    padding-bottom: 10px;
+}
+
+.user-chevron-cont {
+    flex: 1;
+    display: flex;
+
+    justify-content: flex-end;
+    align-items: center;
+}
