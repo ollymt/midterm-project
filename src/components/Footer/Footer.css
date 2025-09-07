@@ -1,6 +1,6 @@
 .footer {
-    background-color: #D94F04;
-    color: #F4E2DE;
+    background-color: #13678A;
+    color: #CEF0FF;
     width: 100vw;
     height: 200px;
     display: flex;
@@ -18,7 +18,7 @@
 }
 
 .footerlink {
-    color: #F4E2DE;
+    color: #CEF0FF;
 }
 
 .tiny {

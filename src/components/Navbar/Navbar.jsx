@@ -9,7 +9,6 @@ export default function NavBar({ onSignInClick }) {
                 <h1 className='logo'>STUDYSPOT</h1>
                 <p className='reg-code'>PH</p>
             </div>
-            <SearchBar className={"outline-only"}/>
             <Button 
               onClick={onSignInClick} 
               variant='secondary' 

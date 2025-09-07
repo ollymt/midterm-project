@@ -5,6 +5,7 @@ import HomePage from './pages/homepage/Homepage'
 import SigninModal from './components/SigninModal/SigninModal'
 import User from './components/User/User'
 import Button from './components/Button/Button'
+import Footer from './components/Footer/Footer'
 
 function App() {
   const [isModalOpen, setIsModalOpen] = useState(false) // start closed
@@ -28,6 +29,8 @@ function App() {
       <NavBar onSignInClick={() => setIsModalOpen(true)} />
 
       <HomePage />
+
+      <Footer />
     </>
   )
 }

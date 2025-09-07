@@ -53,7 +53,7 @@ export default function HomeGrid({ searchQuery }) {
             {filteredPlaces.length > 0 && (
                 <div className="main-grid">
                     {filteredPlaces.map((place) => (
-                        <Card key={place.id} title={place.name} body={place.description} subtitle={place.location} image={place.main_image}/>
+                        <Card key={place.id} id={place.id} prevPage="/" title={place.name} body={place.description} subtitle={place.location} image={place.main_image} price={place.price} amenities={place.amenities} hours={place.hours} time_slots={place.time_slots}/>
                     ))}
                 </div>
             )}

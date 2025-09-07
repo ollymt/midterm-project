@@ -19,6 +19,8 @@
 
     align-content: center;
     justify-content: flex-end;
+
+    z-index: 100000;
 }
 
 .logo-cont {
@@ -32,9 +34,11 @@
     margin: 0;
     padding-left: 5px;
     font-size: 2rem;
+    color: #13668A;
 }
 
 .reg-code {
     font-size: 12px;
     margin: 0px 0px 0px 4px;
+    color: #13668A;
 }

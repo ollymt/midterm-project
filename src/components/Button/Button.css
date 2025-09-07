@@ -16,9 +16,13 @@
     cursor: pointer;
 }
 
+.button p {
+    margin: 0;
+}
+
 .primary {
     background-color: #13678A;
-    color: #ffffff;
+    color: #CEF0FF;
     transition: ease-in-out 0.2s;
 }
 
@@ -38,7 +42,7 @@
 
 .disabled {
     opacity: 0.5;
-    cursor: not-allowed;
+    cursor: not-allowed !important;
 }
 
 .nav-link {
