@@ -1,6 +1,5 @@
 import './Navbar.css'
 import Button from '../Button/Button'
-import SearchBar from '../Searchbar/SearchBar'
 
 export default function NavBar({ onSignInClick }) {
     return (
@@ -11,10 +10,9 @@ export default function NavBar({ onSignInClick }) {
             </div>
             <Button 
               onClick={onSignInClick} 
-              variant='secondary' 
-              className='outline-only'
+              variant='primary' 
             >
-              <p className='button-text'>🔑 Sign-in</p>
+              <p className='button-text'> <b>Sign-in</b> </p>
             </Button>
         </div>
     )
