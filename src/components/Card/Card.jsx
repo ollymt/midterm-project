@@ -6,6 +6,7 @@ export default function Card({ id, title = "title", subtitle = "subtitle", body 
 
     const handleClick = () => {
         // push to detail page like /place/1
+        console.log(`navigating to place ${id}`)
         navigate(`/place/${id}`)
     }
 

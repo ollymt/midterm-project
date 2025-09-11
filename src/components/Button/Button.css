@@ -43,6 +43,8 @@
 .disabled {
     opacity: 0.5;
     cursor: not-allowed !important;
+    user-select: none !important;
+    
 }
 
 .nav-link {
@@ -66,4 +68,17 @@
     border: 2px solid #13678A;
     border-radius: 25px !important;
     color: #13678A;
+}
+
+.no-shadow {
+    box-shadow: none !important;
+}
+
+.square {
+    aspect-ratio: 1 !important;
+    height: 40px !important;
+}
+
+.icon-only-p {
+    font-size: 16px;
 }

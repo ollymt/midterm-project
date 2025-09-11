@@ -5,12 +5,17 @@ import Dropdown from "../../components/Dropdown/Dropdown"
 import Button from "../../components/Button/Button"
 import './PlaceDetail.css'
 import Footer from "../../components/Footer/Footer"
+import MyDatePicker from "../../components/DatePicker/DatePicker"
+import { toast } from "react-hot-toast"
+import { useFakeAuth } from "../../contexts/FakeAuthContext"
 
 export default function PlaceDetail() {
     const { id } = useParams()
     const navigate = useNavigate()
     const [place, setPlace] = useState(null)
-    const { selectedTimeSlot, setSelectedTimeSlot } = useBooking()
+    const { selectedTimeSlot, setSelectedTimeSlot, selectedDate, setSelectedDate, addBooking } = useBooking()
+    const { user } = useFakeAuth()
+    const [isModalOpen, setIsModalOpen] = useState(false) // start closed
 
     useEffect(() => {
         fetch("/data/places.json")
@@ -25,6 +30,26 @@ export default function PlaceDetail() {
     const handleClose = () => {
         navigate(-1)
     }
+
+    const handleBooking = () => {
+        addBooking(place.id)
+        console.log(`Booking to place id ${place.id} success!`)
+    }
+
+    useEffect(() => {
+        fetch("/data/places.json")
+            .then(res => res.json())
+            .then(data => {
+                const found = data.find(p => p.id === parseInt(id))
+                setPlace(found)
+
+                // reset time and date when loading a new place
+                setSelectedTimeSlot("")
+                setSelectedDate("")
+            })
+            .catch(err => console.error("error loading places.json", err))
+    }, [id])
+
 
     if (!place) return (
         <>
@@ -78,17 +103,60 @@ export default function PlaceDetail() {
                                 <h2 className="subtitle-h2">Hours: {place.hours}</h2>
 
                                 {/* pass handler down */}
+                                <MyDatePicker
+                                    onSelect={setSelectedDate}
+                                />
+
                                 <Dropdown
                                     items={place.time_slots}
                                     onSelect={setSelectedTimeSlot}
                                 />
 
-                                <Button
-                                    children={<p>{selectedTimeSlot ? "📖 Book" : "🕞 Pick a time slot first"}</p>}
-                                    able={selectedTimeSlot ? "enabled" : "disabled"}
-                                    variant={selectedTimeSlot ? "primary" : "secondary"}
-                                    extraClass="book-button"
-                                />
+                                {user ? (
+                                    <Button
+                                        children={
+                                            <p>{(selectedTimeSlot && selectedDate) ? "📖 Book" : "🕞 Pick date and time slot first"}</p>
+                                        }
+                                        able={(selectedTimeSlot && selectedDate) ? "enabled" : "disabled"}
+                                        variant={(selectedTimeSlot && selectedDate) ? "primary" : "secondary"}
+                                        extraClass="book-button"
+                                        onClick={
+                                            (selectedTimeSlot && selectedDate)
+                                                ? handleBooking
+                                                : () => {
+                                                    toast.error("Pick date and time first", {
+                                                        style: {
+                                                            border: '1px solid #8A1327',
+                                                            color: '#8A1327',
+                                                            zIndex: '1000000',
+                                                            boxShadow: "0 0 4px 0 rgba(0, 0, 0, 0.5)"
+                                                        },
+                                                        iconTheme: {
+                                                            primary: "#8A1327",
+                                                            secondary: "#FFCED6"
+                                                        }
+                                                    })
+                                                }
+                                        }
+                                    />
+                                ) : (
+                                    <Button children={<p>🔑 Sign-in to book</p>} able="disabled" variant="primary" disabled onClick={
+                                        () => {
+                                            toast.error("Sign-in first", {
+                                                style: {
+                                                    border: '1px solid #8A1327',
+                                                    color: '#8A1327',
+                                                    zIndex: '1000000',
+                                                    boxShadow: "0 0 4px 0 rgba(0, 0, 0, 0.5)"
+                                                },
+                                                iconTheme: {
+                                                    primary: "#8A1327",
+                                                    secondary: "#FFCED6"
+                                                }
+                                            })
+                                        }
+                                    } />
+                                )}
                             </div>
                         </div>
                     </div>
