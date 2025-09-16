@@ -2,6 +2,8 @@
 import { createContext, useContext } from "react"
 import useLocalStorage from "../hooks/useLocalStorage"
 import { toast } from 'react-hot-toast'
+import successSound from "../../public/audio/success.mp3"
+import { useFakeAuth } from "./FakeAuthContext"
 
 const BookingContext = createContext()
 
@@ -10,13 +12,30 @@ export function BookingProvider({ children }) {
     const [selectedDate, setSelectedDate] = useLocalStorage("selectedDate", "")
     const [bookings, setBookings] = useLocalStorage("bookings", [])
 
-    const addBooking = (spaceId) => {
+    const { user } = useFakeAuth()
+
+
+    function handleSuccessFeedback() {
+        const sound = new Audio(successSound)
+        sound.play()
+    }
+
+    const addBooking = (place) => {
+        if (!user) return
         const newBooking = {
-            spaceId,
+            id: place.id,
+            name: place.name,
+            location: place.location,
+            price: place.price,
             time: selectedTimeSlot,
-            date: selectedDate, // include date here
+            date: selectedDate,
+            username: user.username,
+            bookedAt: (Math.floor(Date.now() / 1000 * Math.random())),
+            status: "active", // 👈 add this
         }
+
         setBookings([...bookings, newBooking])
+        handleSuccessFeedback()
         toast(`Successfully Booked!`, {
             icon: '🥳',
             style: {
@@ -32,8 +51,12 @@ export function BookingProvider({ children }) {
         })
     }
 
-    const cancelBooking = (index) => {
-        setBookings(bookings.filter((_, i) => i !== index))
+    const cancelBooking = (bookedAtToCancel) => {
+        const updatedBookings = bookings.map(b =>
+            b.bookedAt === bookedAtToCancel ? { ...b, status: "canceled" } : b
+        )
+        setBookings(updatedBookings)
+        handleSuccessFeedback()
         toast(`Canceled Booking`, {
             icon: '😔',
             style: {

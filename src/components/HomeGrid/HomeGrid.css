@@ -5,3 +5,8 @@
     gap: 1rem;
     justify-content: center;
 }
+
+.no-recipe-img {
+    font-size: 100px;
+    user-select: none;
+}

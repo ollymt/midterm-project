@@ -1,0 +1,138 @@
+.booking-card {
+    width: 100%;
+    max-width: 1000px;
+    background-color: #fff;
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+}
+
+.booking-info-cont-row-header {
+    background-color: #13678A;
+    color: #CEF0FF;
+    padding: 10px 10px 5px 10px;
+    border-radius: 10px 10px 0 0;
+}
+
+.booking-info-cont-row-header h1 {
+    margin: 0;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.main-booking-info-cont {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch; /* make all children equal height */
+}
+
+.booking-info-cont-1 {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    padding: 10px;
+    padding-left: 15px;
+    padding-right: 0;
+    justify-content: center;
+    flex: 1;
+}
+
+.booking-info-cont-row {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    gap: 10px;
+}
+
+.booking-info {
+    width: 100%;
+}
+
+.booking-info p {
+    margin: 0;
+}
+
+.booking-info-label-cont {
+    font-size: 20px;
+    padding-left: 8px;
+    font-weight: 400;
+    width: 100% !important;
+}
+
+.booking-info-field-cont {
+    background-color: #eae8e8;
+    font-size: 16px;
+    padding: 10px;
+    border-radius: 10px;
+    width: 100% !important;
+}
+
+.booking-info-cont-3 {
+    display: flex;
+    align-items: center; /* centers barcode vertically */
+    justify-content: center; /* centers barcode horizontally inside */
+    padding: 0 10px;
+    border: 2px dashed #999999;
+    border-top: none;
+    border-bottom: none;
+    border-left: none;
+    padding-left: 0;
+    user-select: none;
+
+    transform: rotate(0deg); /* no rotation so it looks like a vertical divider */
+    writing-mode: vertical-rl; /* makes text run top-to-bottom if you want barcode vertical */
+}
+
+.booking-barcode {
+    font-family: "Libre Barcode 39", sans-serif;
+    font-size: 35px;
+    margin: 0;
+    text-align: center;
+    transform: scaleX(2);
+    transform: scaleY(1.7);
+}
+
+.booking-info-cont-1 p {
+    margin: 0;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+}
+
+.booking-info-cont-2 {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+    justify-content: center;
+    padding-right: 15px;
+}
+
+.booking-info-cont-column {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.booking-barcode-2 {
+    font-family: "Libre Barcode 39", sans-serif;
+    margin: 0;
+    font-size: 50px;
+    text-align: center;
+    width: 100%;
+    line-height: -1;
+    margin-top: 14px;
+    transform: scale(1.5);
+    user-select: none;
+}
+
+.confirm-dialog {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.booking-info-cont-row.cancel {
+    justify-content: end;
+}

@@ -58,7 +58,7 @@
     "name": "The Quiet Corner",
     "location": "123 Maple St, Downtown",
     "price": "Free",
-    "main_image": "https://example.com/images/quiet_corner_main.jpg",
+    "main_image": "https://imgs.search.brave.com/jodRPzm-G8y1fc9yD1YBXcJfZPoI68YjzUKJ8zCBQKI/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5kZXNpZ25jYWZl/LmNvbS93cC1jb250/ZW50L3VwbG9hZHMv/MjAyMC8wNC8yMTAx/NTQzNC9zdHVkeS1y/b29tLWRlc2lnbi13/aXRoLWxvbmctc2hh/cmVkLXN1cmZhY2Uu/anBn",
     "images": [
       "https://example.com/images/quiet_corner_1.jpg",
       "https://example.com/images/quiet_corner_2.jpg",
@@ -78,7 +78,7 @@
     "name": "Campus Library",
     "location": "456 University Ave",
     "price": "₱250",
-    "main_image": "https://example.com/images/campus_library_main.jpg",
+    "main_image": "https://imgs.search.brave.com/4eQJfia7Jjtk7l6M0K3zpijZe9Hm6twg_u14mBBqxwQ/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9mcmFt/ZXJ5LmNvbS93cC1j/b250ZW50L3VwbG9h/ZHMvMjAyNC8xMi9m/cmFtZXJ5LXNjZGgt/Y292ZXItMS00ODB4/MzAwLmpwZw",
     "images": [
       "https://example.com/images/campus_library_1.jpg",
       "https://example.com/images/campus_library_2.jpg"
@@ -97,7 +97,7 @@
     "name": "Cafe Espresso",
     "location": "789 Coffee Lane",
     "price": "₱100-₱500",
-    "main_image": "https://example.com/images/cafe_espresso_main.jpg",
+    "main_image": "https://imgs.search.brave.com/Qb7XP8yNWAdRyK3o-CO5iIWKRT6Z3F_iVxv-2_odMUw/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zdHJh/cGktbGlicmFyeS13/ZWJzaXRlLWNtcy1w/LWNvbnRlbnRidWNr/ZXQ1MmQ0YjEyYy1t/dGV6a2pxbmp1NGIu/czMudXMtZWFzdC0x/LmFtYXpvbmF3cy5j/b20vbWVkaXVtXzJf/Q29sbGFib3JhdGlv/bl9IdWJfTGFyZ2Vy/X2QxNzQyNGVkNzQu/anBn",
     "images": [
       "https://example.com/images/cafe_espresso_1.jpg",
       "https://example.com/images/cafe_espresso_2.jpg",
@@ -117,7 +117,7 @@
     "name": "Riverside Study Hall",
     "location": "321 River Rd",
     "price": "Free",
-    "main_image": "https://example.com/images/riverside_main.jpg",
+    "main_image": "https://imgs.search.brave.com/D5UVufTMWUSHivT-jp7VInrtB95Zoox1EcQ0tdlA6QE/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4t/aW1hZ2VzLndld29y/ay5jb20vaW1hZ2Vz/LzU5Q0VFODQ4LThD/MDAtMTFFQi05MTI0/LTBFNkE1REM2ODlD/RC81OWNlZTg0OC04/YzAwLTExZWItOTEy/NC0wZTZhNWRjNjg5/Y2RfMC5qcGc_d2lk/dGg9NjAw",
     "images": [
       "https://example.com/images/riverside_1.jpg",
       "https://example.com/images/riverside_2.jpg"
@@ -135,7 +135,7 @@
     "name": "Tech Hub Co-Work",
     "location": "654 Innovation Blvd",
     "price": "₱750",
-    "main_image": "https://example.com/images/tech_hub_main.jpg",
+    "main_image": "https://imgs.search.brave.com/JjUkmugYNIi5n7Zt7JwxAkLpJc0rxHzBn6Q95Tc29uQ/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pLnBp/bmltZy5jb20vb3Jp/Z2luYWxzL2FhLzAw/LzY3L2FhMDA2Nzg0/NDA1MjRjOTEyY2Iy/YWIxMWRiMTM0NGE3/LmpwZw",
     "images": [
       "https://example.com/images/tech_hub_1.jpg",
       "https://example.com/images/tech_hub_2.jpg",
@@ -156,7 +156,7 @@
     "name": "Green Garden Cafe",
     "location": "987 Blossom St",
     "price": "₱150-₱600",
-    "main_image": "https://example.com/images/green_garden_main.jpg",
+    "main_image": "https://imgs.search.brave.com/_ppSE_qWuATQ8gIBm0_DAV4Ux6jLTCIG3m_HGv0w3t8/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/c2Fzc3ltYW1hc2cu/Y29tL3dwLWNvbnRl/bnQvdXBsb2Fkcy8y/MDE5LzAxL2NvLXdv/cmtpbmctc3BhY2Vz/LXNpbmdhcG9yZS1P/Mi1Xb3JrLmpwZw",
     "images": [
       "https://example.com/images/green_garden_1.jpg",
       "https://example.com/images/green_garden_2.jpg"
@@ -175,7 +175,7 @@
     "name": "Library Loft",
     "location": "222 Elm St",
     "price": "Free",
-    "main_image": "https://example.com/images/library_loft_main.jpg",
+    "main_image": "https://imgs.search.brave.com/QWMjyXjHjKudqKME-sugSMqmuYD7QPcAlOsfnfnOwO0/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/Zm9obGlvLmNvbS9o/cy1mcy9odWJmcy9J/bXBvcnRlZF9CbG9n/X01lZGlhL1RoZS1B/bmF0b215LW9mLUdv/b2QtQ293b3JraW5n/LVNwYWNlLURlc2ln/bi1Jbi1QaWN0dXJl/cy1Gb2hsaW8tUHJv/ZHVjdC1TcGVjaWZp/Y2F0aW9uLWFuZC1N/YXRlcmlhbHMtQnVk/Z2V0LUNhbGN1bGF0/b3ItQnJhbmRPcHVz/LUxvbmRvbi0xLmpw/Zz93aWR0aD03MDAm/aGVpZ2h0PTQ2NyZu/YW1lPVRoZS1BbmF0/b215LW9mLUdvb2Qt/Q293b3JraW5nLVNw/YWNlLURlc2lnbi1J/bi1QaWN0dXJlcy1G/b2hsaW8tUHJvZHVj/dC1TcGVjaWZpY2F0/aW9uLWFuZC1NYXRl/cmlhbHMtQnVkZ2V0/LUNhbGN1bGF0b3It/QnJhbmRPcHVzLUxv/bmRvbi0xLmpwZw",
     "images": [
       "https://example.com/images/library_loft_1.jpg",
       "https://example.com/images/library_loft_2.jpg",
@@ -195,7 +195,7 @@
     "name": "Sunset Study Patio",
     "location": "111 Sunset Blvd",
     "price": "₱250",
-    "main_image": "https://example.com/images/sunset_patio_main.jpg",
+    "main_image": "https://imgs.search.brave.com/F0pP5zfPdPP4G2tEw9vReWnhVgUgdCjkAgj50czM7UY/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/d29ya2Rlc2lnbi5j/b20vd3AtY29udGVu/dC91cGxvYWRzLzIw/MjIvMDUvMTE0OThf/TjM5LmpwZWc",
     "images": [
       "https://example.com/images/sunset_patio_1.jpg",
       "https://example.com/images/sunset_patio_2.jpg"
@@ -213,7 +213,7 @@
     "name": "Downtown Book Nook",
     "location": "333 Center St",
     "price": "₱100-₱400",
-    "main_image": "https://example.com/images/book_nook_main.jpg",
+    "main_image": "https://imgs.search.brave.com/UYQCIZTrdHAt7BX3szqVNBdJEROg9ZErm3Dm75j7bs0/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pLnBp/bmltZy5jb20vb3Jp/Z2luYWxzLzY2LzQw/LzFiLzY2NDAxYjhm/YjQzYjJiYTIxNzky/M2ZmZmU2ZDdhNDc4/LmpwZw",
     "images": [
       "https://example.com/images/book_nook_1.jpg",
       "https://example.com/images/book_nook_2.jpg"
@@ -232,7 +232,7 @@
     "name": "Highland Study Lounge",
     "location": "555 Hilltop Rd",
     "price": "₱500",
-    "main_image": "https://example.com/images/highland_lounge_main.jpg",
+    "main_image": "https://imgs.search.brave.com/LwBerV5uN3bKS0k9k3GP5lfC1z-qyblXecasFILRsdY/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/cGl4YWJheS5jb20v/cGhvdG8vMjAyNC8w/OC8yMC8xNC8zMC9h/aS1nZW5lcmF0ZWQt/ODk4MzUwNl82NDAu/anBn",
     "images": [
       "https://example.com/images/highland_lounge_1.jpg",
       "https://example.com/images/highland_lounge_2.jpg"

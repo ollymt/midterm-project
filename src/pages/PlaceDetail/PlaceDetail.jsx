@@ -4,18 +4,33 @@ import { useBooking } from "../../contexts/BookingContext"
 import Dropdown from "../../components/Dropdown/Dropdown"
 import Button from "../../components/Button/Button"
 import './PlaceDetail.css'
-import Footer from "../../components/Footer/Footer"
 import MyDatePicker from "../../components/DatePicker/DatePicker"
 import { toast } from "react-hot-toast"
 import { useFakeAuth } from "../../contexts/FakeAuthContext"
+
+import errorSound from "../../../public/audio/error.mp3"
 
 export default function PlaceDetail() {
     const { id } = useParams()
     const navigate = useNavigate()
     const [place, setPlace] = useState(null)
-    const { selectedTimeSlot, setSelectedTimeSlot, selectedDate, setSelectedDate, addBooking } = useBooking()
+    const { selectedTimeSlot, setSelectedTimeSlot, selectedDate, setSelectedDate, addBooking, bookings } = useBooking()
     const { user } = useFakeAuth()
     const [isModalOpen, setIsModalOpen] = useState(false) // start closed
+
+    const isAlreadyBooked = bookings.some(
+        b =>
+            b.username === user?.username &&
+            b.id === place?.id &&
+            b.date === selectedDate &&
+            b.time === selectedTimeSlot &&
+            b.status === "active" // only active bookings count
+    )
+
+    function handleErrorFeedback() {
+        const sound = new Audio(errorSound)
+        sound.play()
+    }
 
     useEffect(() => {
         fetch("/data/places.json")
@@ -32,7 +47,7 @@ export default function PlaceDetail() {
     }
 
     const handleBooking = () => {
-        addBooking(place.id)
+        addBooking(place)
         console.log(`Booking to place id ${place.id} success!`)
     }
 
@@ -65,8 +80,6 @@ export default function PlaceDetail() {
                         extraClass="detail-close-button"
                         onClick={() => (navigate("/"))}
                     />
-
-                    <Footer extraClass="place-detail-footer" />
                 </div>
             </div>
         </>
@@ -112,36 +125,58 @@ export default function PlaceDetail() {
                                     onSelect={setSelectedTimeSlot}
                                 />
 
+                                <p style={{ marginTop: "8px" }}>Bookings cannot be made on the same day.</p>
+
                                 {user ? (
                                     <Button
                                         children={
-                                            <p>{(selectedTimeSlot && selectedDate) ? "📖 Book" : "🕞 Pick date and time slot first"}</p>
+                                            <p>
+                                                {isAlreadyBooked ? "📚 Already booked" : (selectedTimeSlot && selectedDate) ? "📖 Book" : "🕞 Pick date and time slot first"}
+                                            </p>
                                         }
-                                        able={(selectedTimeSlot && selectedDate) ? "enabled" : "disabled"}
-                                        variant={(selectedTimeSlot && selectedDate) ? "primary" : "secondary"}
+                                        able={isAlreadyBooked ? "disabled" : (selectedTimeSlot && selectedDate) ? "enabled" : "disabled"}
+                                        variant={isAlreadyBooked ? "secondary" : (selectedTimeSlot && selectedDate) ? "primary" : "secondary"}
                                         extraClass="book-button"
                                         onClick={
-                                            (selectedTimeSlot && selectedDate)
-                                                ? handleBooking
-                                                : () => {
-                                                    toast.error("Pick date and time first", {
-                                                        style: {
-                                                            border: '1px solid #8A1327',
-                                                            color: '#8A1327',
-                                                            zIndex: '1000000',
-                                                            boxShadow: "0 0 4px 0 rgba(0, 0, 0, 0.5)"
-                                                        },
-                                                        iconTheme: {
-                                                            primary: "#8A1327",
-                                                            secondary: "#FFCED6"
-                                                        }
-                                                    })
-                                                }
+                                            isAlreadyBooked ? () => {
+                                                handleErrorFeedback()
+                                                toast("Already booked", {
+                                                    icon: "📚",
+                                                    style: {
+                                                        border: '1px solid #8A1327',
+                                                        color: '#8A1327',
+                                                        zIndex: '1000000',
+                                                        boxShadow: "0 0 4px 0 rgba(0, 0, 0, 0.5)"
+                                                    },
+                                                    iconTheme: {
+                                                        primary: "#8A1327",
+                                                        secondary: "#FFCED6"
+                                                    }
+                                                })
+                                            } :
+                                                (selectedTimeSlot && selectedDate)
+                                                    ? handleBooking
+                                                    : () => {
+                                                        handleErrorFeedback()
+                                                        toast.error("Pick date and time first", {
+                                                            style: {
+                                                                border: '1px solid #8A1327',
+                                                                color: '#8A1327',
+                                                                zIndex: '1000000',
+                                                                boxShadow: "0 0 4px 0 rgba(0, 0, 0, 0.5)"
+                                                            },
+                                                            iconTheme: {
+                                                                primary: "#8A1327",
+                                                                secondary: "#FFCED6"
+                                                            }
+                                                        })
+                                                    }
                                         }
                                     />
                                 ) : (
                                     <Button children={<p>🔑 Sign-in to book</p>} able="disabled" variant="primary" disabled onClick={
                                         () => {
+                                            handleErrorFeedback()
                                             toast.error("Sign-in first", {
                                                 style: {
                                                     border: '1px solid #8A1327',
@@ -155,7 +190,7 @@ export default function PlaceDetail() {
                                                 }
                                             })
                                         }
-                                    } />
+                                    } extraClass="book-button" />
                                 )}
                             </div>
                         </div>
@@ -167,8 +202,6 @@ export default function PlaceDetail() {
                         extraClass="detail-close-button"
                         onClick={handleClose}
                     />
-
-                    <Footer extraClass="place-detail-footer" />
                 </div>
             </div>
         </>

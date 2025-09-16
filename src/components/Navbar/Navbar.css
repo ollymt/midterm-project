@@ -20,7 +20,7 @@
     align-content: center;
     justify-content: flex-end;
 
-    z-index: 100000;
+    z-index: 999;
 }
 
 .logo-cont {
@@ -41,4 +41,16 @@
     font-size: 12px;
     margin: 0px 0px 0px 4px;
     color: #13668A;
+}
+
+.signout-confirm-cont {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+}
+
+.signout-confirm-cont p {
+    margin: 0;
+    align-content: center;
+    justify-content: center;
 }

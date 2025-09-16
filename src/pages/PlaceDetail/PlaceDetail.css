@@ -30,9 +30,12 @@
     gap: 1rem;
 
     margin-bottom: 3rem;
+    padding-bottom: 2rem;
 
     position: relative;
     box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.5);
+
+    z-index: 3 !important;
 }
 
 .card-img-cont {
@@ -126,7 +129,6 @@
     /* distance from top of screen */
     left: 20px;
     /* distance from right edge */
-    z-index: 100003;
     /* above everything else */
     cursor: pointer;
     aspect-ratio: 1/1;
@@ -160,4 +162,5 @@
     align-items: center;
     height: 100%;
     width: 100%;
+    padding-bottom: 2rem;
 }

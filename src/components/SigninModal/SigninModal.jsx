@@ -3,6 +3,8 @@ import { useFakeAuth } from "../../contexts/FakeAuthContext"
 import User from "../User/User"
 import Button from "../Button/Button"
 import './SigninModal.css'
+import errorSound from "../../../public/audio/error.mp3"
+import { toast } from "react-hot-toast"
 
 export default function SigninModal({ isOpen, onClose }) {
     const { signIn } = useFakeAuth()
@@ -12,8 +14,16 @@ export default function SigninModal({ isOpen, onClose }) {
 
     if (!isOpen) return null
 
+    function handleErrorFeedback() {
+        const sound = new Audio(errorSound);
+        sound.play()
+    }
+
     const handleSignIn = () => {
         signIn({ username, password })
+        if (!username || !password) {
+            return
+        }
         setUsername("")
         setPassword("")
         setPassVisible(false)
@@ -48,7 +58,7 @@ export default function SigninModal({ isOpen, onClose }) {
                         onChange={e => setPassword(e.target.value)}
                         className="signin-modal-input"
                     />
-                    <Button onClick={() => {setPassVisible(!passVisible)}} variant={passVisible ? "primary" : "secondary"} able="enabled" children={<p className="icon-only-p">👁️</p>} extraClass="square" tooltip={passVisible ? "Hide password" : "Show password"}/>
+                    <Button onClick={() => { setPassVisible(!passVisible) }} variant={passVisible ? "primary" : "secondary"} able="enabled" children={<p className="icon-only-p">👁️</p>} extraClass="square" tooltip={passVisible ? "Hide password" : "Show password"} />
                 </div>
 
                 <div className="signin-modal-bttn-cont">

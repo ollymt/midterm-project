@@ -25,15 +25,17 @@ export default function HomeGrid({ searchQuery }) {
     }, [])
 
     const filteredPlaces = places.filter((place) => {
-        if (!place || !place.name) return false
+        if (!place || !place.name || !place.location) return false
         if (!searchQuery) return true
-        return place.name.toLowerCase().includes(searchQuery.toLowerCase())
+        return (place.name.toLowerCase().includes(searchQuery.toLowerCase()),
+            place.location.toLowerCase().includes(searchQuery.toLowerCase())
+        )
     })
 
     return (
-        <div style={{ marginTop: "40px", marginBottom: "1rem", padding: "0 20px" }}>
+        <div style={{ marginTop: "40px", paddingBottom: "1rem" }}>
             {filteredPlaces.length === 0 && (
-                <div style={{ textAlign: 'center', padding: '40px', userSelect: 'none' }}>
+                <div style={{ textAlign: 'center', padding: '40px', userSelect: 'none', height: "50.5vh" }}>
                     <h1 className="no-recipe-img">
                         {searchQuery ? "🫥" : "🫙"}
                     </h1>
