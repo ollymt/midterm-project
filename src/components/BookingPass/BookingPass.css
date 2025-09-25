@@ -85,7 +85,7 @@
 
 .booking-barcode {
     font-family: "Libre Barcode 39", sans-serif;
-    font-size: 35px;
+    font-size: 30px;
     margin: 0;
     text-align: center;
     transform: scaleX(2);

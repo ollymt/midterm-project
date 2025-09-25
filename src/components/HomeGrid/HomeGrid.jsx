@@ -27,7 +27,7 @@ export default function HomeGrid({ searchQuery }) {
     const filteredPlaces = places.filter((place) => {
         if (!place || !place.name || !place.location) return false
         if (!searchQuery) return true
-        return (place.name.toLowerCase().includes(searchQuery.toLowerCase()),
+        return (place.name.toLowerCase().includes(searchQuery.toLowerCase()) || 
             place.location.toLowerCase().includes(searchQuery.toLowerCase())
         )
     })
