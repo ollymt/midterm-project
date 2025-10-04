@@ -1,5 +1,5 @@
 // components/SearchBar.jsx
-import "./Searchbar.css"
+import "./SearchBar.css"
 
 export default function SearchBar({ searchQuery, setSearchQuery, className }) {
     return (
