@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import './App.css'
 import NavBar from './components/Navbar/Navbar'
-import HomePage from './pages/Homepage/HomePage'
+import HomePage from './pages/Homepage/Homepage'
 import PlaceDetail from './pages/PlaceDetail/PlaceDetail'
 import BookingsPage from './pages/BookingsPage/BookingsPage'
 import PRoute from "./components/PRoute/PRoute"
